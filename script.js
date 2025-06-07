@@ -219,6 +219,16 @@ function showCategory(category) {
     // 🔹 work 等のカテゴリ表示処理
     contentList.innerHTML = `<p>${category}</p>`;
 
+    // 🔸 プレビュー用画像を事前にプリロード（ここに追加！）
+    if (contents[category]) {
+      contents[category].forEach(item => {
+        if (item.images && item.images.length > 0) {
+          const preloadImg = new Image();
+          preloadImg.src = item.images[0];
+        }
+      });
+    }
+
     contents[category].forEach((item, index) => {
       const div = document.createElement('div');
       div.className = 'content-item';
@@ -293,9 +303,14 @@ function setupHoverPreview(div, item, index, category) {
 function showDetails(category, index) {
   const container = document.querySelector('.container');
 
+  // 🔸 プレビューを非表示にする処理を追加
   const previewDiv = document.getElementById('preview-item');
-
-
+  const previewImg = document.getElementById('preview-img');
+  if (previewDiv && previewImg) {
+    previewImg.src = '';
+    previewImg.style.display = 'none';
+    previewDiv.style.display = 'none';
+  }
   const detail = contents[category][index];
   const detailDiv = document.getElementById('detail-item');
   detailDiv.scrollTop = 0;
