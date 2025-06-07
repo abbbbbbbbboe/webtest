@@ -151,9 +151,15 @@ const contents = {
   ]
 };
 
+// ===============================
+// 🔷 グローバル変数の初期化
+// ===============================
 let selectedDetailIndex = null;
 let selectedDetailCategory = null;
 
+// ===============================
+// 🔷 カテゴリ表示処理
+// ===============================
 function showCategory(category) {
   // 左メニューの選択状態を更新
   document.querySelectorAll('.menu-item').forEach(item => {
@@ -168,123 +174,140 @@ function showCategory(category) {
   const detailsDiv = document.getElementById('details');
   contentList.innerHTML = '';
   detailsDiv.innerHTML = `
-  <div id="preview-item"></div>
+   <div id="preview-item" >
+    <img id="preview-img" style="width: 100%; height: 100%;" />
+  </div>
   <div id="detail-item"></div>
 `;
-
 
   selectedDetailIndex = null;
   selectedDetailCategory = null;
 
- if (category === 'about' || category === 'contact' || category === 'link_list') {
-  const item = contents[category][0];
+  // 🔹 about/contact/link_list の表示処理
+  if (category === 'about' || category === 'contact' || category === 'link_list') {
+    const item = contents[category][0];
 
-  let html = `
-    <p>${item.title}</p>
-    <p>${item.details}</p>
-  `;
+    let html = `
+      <p>${item.title}</p>
+      <p>${item.details}</p>
+    `;
 
-  // 🔽リンクがあれば中央エリアに表示
-  if (item.links && item.links.length > 0) {
-   const linkListHTML = `
-    <div class="links">
-      ${item.links.map(link =>
-        `<p><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.title}</a></p>`
-      ).join('')}
-    </div>
-  `;
-    html += linkListHTML;
-  }
+    // 🔸 リンク一覧を中央エリアに表示
+    if (item.links && item.links.length > 0) {
+      const linkListHTML = `
+        <div class="links">
+          ${item.links.map(link =>
+            `<p><a href="${link.url}" target="_blank" rel="noopener noreferrer">${link.title}</a></p>`
+          ).join('')}
+        </div>
+      `;
+      html += linkListHTML;
+    }
 
-  contentList.innerHTML = html;
+    contentList.innerHTML = html;
 
-  // 画像があれば右側（detailsDiv）に表示
-  let imagesHTML = '';
-  if (item.images && item.images.length > 0) {
-    imagesHTML = item.images.map(src => `<img src="${src}" class="about-image">`).join('');
-    detailsDiv.innerHTML = imagesHTML;
+    // 🔸 画像があれば右側（detailsDiv）に表示
+    let imagesHTML = '';
+    if (item.images && item.images.length > 0) {
+      imagesHTML = item.images.map(src => `<img src="${src}" class="about-image">`).join('');
+      detailsDiv.innerHTML = imagesHTML;
+    } else {
+      detailsDiv.innerHTML = ''; // 画像がなければ空に
+    }
+
   } else {
-    detailsDiv.innerHTML = ''; // 画像がなければ空に
-  }
-
-  } else {
+    // 🔹 work 等のカテゴリ表示処理
     contentList.innerHTML = `<p>${category}</p>`;
 
     contents[category].forEach((item, index) => {
-  const div = document.createElement('div');
-  div.className = 'content-item';
+      const div = document.createElement('div');
+      div.className = 'content-item';
+
+      // タイトル + 日付・カテゴリをHTMLとして組み立て
+      div.innerHTML = `
+        <strong>${item.title}</strong><br>
+        ${item.date ? `<small>${item.category}</small>` : ''}
+        ${item.category ? `<small>${item.date}</small>` : ''}
+      `;
+
+      // 🔸 詳細表示クリックイベント
+      div.onclick = () => showDetails(category, index);
+      setupHoverPreview(div, item, index, category);
 
 
+     
 
-  // タイトル + 日付・カテゴリをHTMLとして組み立て
-  div.innerHTML = `
-    <strong>${item.title}</strong><br>
-    ${item.date ? `<small>${item.category}</small>` : ''}
-    ${item.category ? `<small>${item.date}</small>` : ''}
-  `;
-
-  div.onclick = () => showDetails(category, index);
-
- const previewDiv = document.getElementById("preview-item");
-
-div.onmouseenter = () => {
-  if (selectedDetailIndex === index && selectedDetailCategory === category) return;
-
-  const previewImage = item.images && item.images[0];
-  const previewDiv = document.getElementById("preview-item");
-
-  if (previewImage) {
-    previewDiv.innerHTML = `
-      <img src="${previewImage}" style="
-       width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-      ">
-    `;
-    previewDiv.style.display = "block";
-  }
-};
-
-div.onmouseleave = () => {
-  const previewDiv = document.getElementById("preview-item");
-  previewDiv.innerHTML = '';
-  previewDiv.style.display = "none";
-};
-
-
-  contentList.appendChild(div);
-});
-
+      contentList.appendChild(div);
+    });
   }
 
+  // 🔸 履歴に追加
   addToHistory({ type: 'category', category });
 
+  // 🔸 モバイル表示用のUI切り替え
   if (window.innerWidth <= 768) {
     container.classList.remove('show-detail');
     container.classList.remove('show-menu');
-    container.classList.add('show-list'); // 中央パネルに進む
+    container.classList.add('show-list');
     window.scrollTo(0, 0);
   }
 }
 
+function setupHoverPreview(div, item, index, category) {
+  const previewDiv = document.getElementById("preview-item");
+  const previewImg = document.getElementById("preview-img");
+
+  div.onmouseenter = () => {
+    if (selectedDetailIndex === index && selectedDetailCategory === category) {
+      return;
+    }
+
+    const previewImage = item.images && item.images[0];
+    if (previewImage) {
+      previewImg.src = previewImage;
+      previewImg.style.display = "block";
+      previewDiv.style.display = "block";
+    }
+  };
+
+  div.onmouseleave = () => {
+    previewImg.src = "";
+    previewImg.style.display = "none";
+    previewDiv.style.display = "none";
+  };
+}
+
+
+
+
+
+
+
+
+
+
+
+// ===============================
+// 🔷 詳細表示処理
+// ===============================
 function showDetails(category, index) {
   const container = document.querySelector('.container');
- 
- const previewDiv = document.getElementById('preview-item');
-if (previewDiv) previewDiv.innerHTML = '';
 
- const detail = contents[category][index];
+  const previewDiv = document.getElementById('preview-item');
+
+
+  const detail = contents[category][index];
   const detailDiv = document.getElementById('detail-item');
-  detailDiv.scrollTop = 0; 
- // ←ここ修正
+  detailDiv.scrollTop = 0;
 
+  // 一覧の選択状態を更新
   document.querySelectorAll('.content-item').forEach(item => {
     item.classList.remove('active');
   });
   const selectedItem = document.querySelectorAll('.content-item')[index];
   if (selectedItem) selectedItem.classList.add('active');
 
+  // 画像リストHTML生成
   let imagesHTML = "";
   if (detail.images && detail.images.length > 0) {
     imagesHTML = detail.images.map((src, idx) => {
@@ -293,7 +316,7 @@ if (previewDiv) previewDiv.innerHTML = '';
     }).join('');
   }
 
-  // detailDiv に詳細を書き込む
+  // 詳細内容を描画
   detailDiv.innerHTML = `
     <p class="detail-title">${detail.title}</p>
     <p class="detail-meta">
@@ -318,19 +341,14 @@ if (previewDiv) previewDiv.innerHTML = '';
   }
 }
 
-
+// ===============================
+// 🔷 初期化処理と背景操作
+// ===============================
 window.addEventListener("load", () => {
-  preloadImages(bgImages); // 画像プリロード（任意）
+  preloadImages(bgImages); // 背景画像のプリロード
+  showCurrentBackground(); // 初期背景表示
 
-  showCurrentBackground();
-  
-function preloadImages(images) {
-  images.forEach(src => {
-    const img = new Image();
-    img.src = `backgroundimag/${src}`;
-  });
-}
-
+  // 🔸 メニュークリックで背景を進める
   const menuItems = document.querySelectorAll(".menu-item");
   menuItems.forEach(item => {
     item.addEventListener("click", () => {
@@ -338,6 +356,7 @@ function preloadImages(images) {
     });
   });
 
+  // 🔸 コンテンツクリックで背景を進める
   const parent = document.getElementById("content-list");
   if (parent) {
     parent.addEventListener("click", (e) => {
@@ -348,8 +367,9 @@ function preloadImages(images) {
   }
 });
 
-
-
+// ===============================
+// 🔷 背景画像関連関数
+// ===============================
 const bgImages = [
   "bg1.png", "bg2.png", "bg3.png", "bg4.png", "bg5.png",
   "bg6.png", "bg7.png", "bg8.png", "bg9.png", "bg10.png",
@@ -359,6 +379,7 @@ const bgImages = [
   "bg26.png", "bg27.png"
 ];
 
+// 🔸 画像プリロード
 function preloadImages(images) {
   images.forEach(src => {
     const img = new Image();
@@ -366,6 +387,7 @@ function preloadImages(images) {
   });
 }
 
+// 🔸 現在の背景画像を表示
 function showCurrentBackground() {
   const detailsDiv = document.getElementById("details");
   let currentIndex = localStorage.getItem("bgIndex");
@@ -377,6 +399,7 @@ function showCurrentBackground() {
   detailsDiv.style.backgroundRepeat = "repeat";
 }
 
+// 🔸 背景画像を進める
 function advanceBackground() {
   let currentIndex = localStorage.getItem("bgIndex");
   if (currentIndex === null) currentIndex = 0;
@@ -388,17 +411,9 @@ function advanceBackground() {
   showCurrentBackground();
 }
 
-
-
-
-
-
-
-
-
-
-// 履歴保持
-
+// ===============================
+// 🔷 履歴保持・履歴バー更新
+// ===============================
 const history = [];
 
 function addToHistory(entry) {
@@ -427,9 +442,9 @@ function addToHistory(entry) {
   });
 }
 
-
-
-
+// ===============================
+// 🔷 ハンバーガーメニュー開閉処理
+// ===============================
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobile-menu');
 
@@ -445,24 +460,24 @@ hamburger.onclick = () => {
   }
 };
 
-// メニュー項目を選択したらメニューを閉じるようにする
+// 🔸 メニュー項目クリックで閉じる
 document.querySelectorAll('#mobile-menu .menu-item').forEach(item => {
   item.addEventListener('click', () => {
     mobileMenu.style.display = 'none';
-    hamburger.classList.remove('open'); // ついでに ☰ に戻す
+    hamburger.classList.remove('open');
   });
 });
 
-
-// メニュー外をクリックしたら閉じる
+// 🔸 メニュー外クリックで閉じる
 document.addEventListener('click', (event) => {
   const isClickInsideMenu = mobileMenu.contains(event.target);
   const isClickOnHamburger = hamburger.contains(event.target);
 
   if (!isClickInsideMenu && !isClickOnHamburger) {
     mobileMenu.style.display = 'none';
-    hamburger.classList.remove('open'); // ×マークを戻す
+    hamburger.classList.remove('open');
   }
 });
+
 
 
