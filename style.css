@@ -166,7 +166,6 @@ small{
 
 .right {
   flex-grow: 1;
-  /* background-image: url("imag/hoshi.png"); */
   background-color: #f3f7fc;
   background-size: 50px;
 }

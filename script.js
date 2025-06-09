@@ -151,6 +151,31 @@ const contents = {
   ]
 };
 
+// 🔸 背景画像を事前に読み込む
+const preloadBackgroundImages = [
+  'imag/left.png',
+  'imag/9.png',
+  'imag/center2.png',
+  'imag/2.png',
+  'imag/7.png',
+  'imag/right.png',
+  'imag/3.png',
+  'imag/5.png',
+  'imag/6.png',
+  'imag/center1.png'
+];
+
+preloadBackgroundImages.forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
+// 🔽 以下、いつもの処理
+function showCategory(category) {
+  // ...
+}
+
+
 // ===============================
 // 🔷 グローバル変数の初期化
 // ===============================
