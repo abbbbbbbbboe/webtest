@@ -524,11 +524,20 @@ border: none;
 
 /* ===== スマホ表示：ステップ切り替え ===== */
 @media screen and (max-width: 768px) {
-  .body{
-    height: 100vh; /* または必要な高さ */
+  body {
   overflow: auto;
-  -webkit-overflow-scrolling: touch; /* iOSで慣性スクロールを有効にする */
+  -webkit-overflow-scrolling: touch;
+}
+
+ ::-webkit-scrollbar,
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-thumb,
+  ::-webkit-scrollbar-thumb:hover {
+    background: initial !important;
+    width: auto !important;
+    height: auto !important;
   }
+
   .container {
     flex-direction: column;
   }
