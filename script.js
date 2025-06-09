@@ -151,6 +151,13 @@ const contents = {
   ]
 };
 
+// ===============================
+// 🔷 グローバル変数の初期化
+// ===============================
+let selectedDetailIndex = null;
+let selectedDetailCategory = null;
+
+
 // 🔸 背景画像を事前に読み込む
 const preloadBackgroundImages = [
   'imag/left.png',
@@ -170,17 +177,9 @@ preloadBackgroundImages.forEach(src => {
   img.src = src;
 });
 
-// 🔽 以下、いつもの処理
-function showCategory(category) {
-  // ...
-}
 
 
-// ===============================
-// 🔷 グローバル変数の初期化
-// ===============================
-let selectedDetailIndex = null;
-let selectedDetailCategory = null;
+
 
 // ===============================
 // 🔷 カテゴリ表示処理
