@@ -1,8 +1,8 @@
 const contents = {
   work: [
    {
-  title: "二人展「シャイニンd(^_^o)」",
-  details: "私、オオタソラと友人の新の二人展のwebsite。星のグラフィックは新が作成し、それを元にwebsiteのデザインと実装を行った。web上のDMやハガキを目指して作成した。カーソルの位置で影の描写が変わる。展示準備の際にやりとりしたメールなども掲載している。",
+  title: "二人展「shinin d(^_^o)」",
+  details: "2024/11/1-3に行った私、オオタソラと友人の新の二人展「shinin d(^_^o)（シャイニン グ）」のwebsite。星のグラフィックは新が作成し、それを元にwebsiteのデザインと実装を行った。展示の際に配布するDMやハガキをwebで作ることを目指して作成した。<br>グラフィックの中に要素が配置され、それをクリックすると情報がポップアップで表示される。情報の載っている中央のエリアからカーソルを出すと、カーソルを光源とするように中央の四角のドロップシャドウが表示される。画面の中で紙のDMの質感を再現するために用いた。<br>また、背景には「shinin d(^_^o)」の綴りに合わせてキラキラと点滅するようにアルファベットが表示される。展示準備の際にやりとりしたメールを往復書簡的に掲載し、準備段階の様子を公開することで展示への期待を持ってもらえるようなコンテンツもサイト内に作った。",
   images: ["workimag/shining/shining1.png", "workimag/shining/shining2.png", "workimag/shining/shining3.png"],
   date: "2024",
   category: "website",
@@ -11,7 +11,7 @@ const contents = {
 ,
       {
   title: "イーソーのタトゥー",
-  details: "友人のタトゥーのデザイン。要望の麻雀のイーソーをモチーフにドットのイラストレーションを作成した。",
+  details: "友人のタトゥーのデザイン。麻雀のイーソーをモチーフにドットのイラストレーションを作成した。<br>タトゥーは細かく線を描くと潰れてしまうため、大きさとドットの荒さのバランスをとりながら、鳥の体はドットで作成したものの輪郭から線におこしている。<br>インクは印刷物用のものとは違うが、複数の色が用意されていてその中から鮮やかめの緑と黒を用いた。<br>場所：右上腕二の腕、サイズ：62*44mm",
   images: ["workimag/iso/iso2.jpg", "workimag/iso/iso1.png", "workimag/iso/iso3.png"],
   date: "2023",
   category: "design",
@@ -19,7 +19,7 @@ const contents = {
 }
 ,   {
   title: "スポーツデンキデパート 1stEP「電波ステーション」",
-  details: "スポーツデンキデパートの1stEP「電波ステーション」のジャケットで使用したイラストレーション。電波っぽく中性的なキャラクターのイラストを作成した。",
+  details: "ボカロPスポーツデンキデパートの1stEP「電波ステーション」のジャケットで使用したイラストレーション。電波っぽく中性的なキャラクターのイラストを作成した。<br>Producer/Composer：スポーツデンキデパート、Illustrator：月面宇宙軍＋オオタソラ、GraphicDesigner：kwsm、Special Thanks：RY /じょん",
   images: ["workimag/dempastation/dempastation1.jpg", "workimag/dempastation/dempastation2.jpg", "workimag/dempastation/dempastation3.jpg", "workimag/dempastation/dempastation4.jpg"],
   date: "2023",
   category: "illustration",
@@ -27,7 +27,7 @@ const contents = {
 }
 ,   {
   title: "小林 玲衣奈 オンライン展示「あわいのために」",
-  details: "小林 玲衣奈さんのオンライン展示「あわいのために」のDMとサイトで使用したグラフィックデザイン。オンライン上での展示なので、DMは16:9のサイズで制作。<br>令和5年度文化庁メディア芸術クリエイター育成支援事業採択",
+  details: "2023年からweb上で開催している、小林 玲衣奈さんのオンライン展示「あわいのために」の告知用DMと展示サイトで使用したグラフィックデザイン、メインビジュアル等の作成。<br>オンライン上での展示なので、モニターの一般的な比率16:9をDMのサイズにした。単色の中の微妙な色の変化を用いて本展示のテーマである「今は無くなってしまった風景」ということをイメージできる柔らかい印象を持つような構成にした。表のグラフィックで用いている文章は作品の一節から印象的なものをそれぞれ抜き出して用いている。全6パターン。<br>DM情報<br>本線紙｜OKACカード_ましろ_354kg、インク｜表：DIC-442,裏：K、渡辺印刷（株）<br>令和5年度文化庁メディア芸術クリエイター育成支援事業採択",
   images: ["workimag/theinbetween/between1.jpg", "workimag/theinbetween/between2.jpg", "workimag/theinbetween/between3.jpg"],
   date: "2023",
   category: "graphic design",
@@ -35,23 +35,23 @@ const contents = {
 }
 ,   {
   title: "塩澄 祥大個展「BMX Graffiti」",
-  details: "塩澄 祥大さんの個展「BMX Graffiti」のチラシなどのグラフィックデザイン。自転車でストリートにグラフィティした作品の展示で、夜に撮影されていたことから写真の荒さを生かしたて作成した。写真のドットを変形させて独自の荒さを作っている。<br>令和5年度文化庁メディア芸術クリエイター育成支援事業採択",
-  images: ["workimag/bmxg/BMXGraffiti.gif", "workimag/bmxg/BMXGraffiti1.jpg", "workimag/bmxg/BMXGraffiti2.jpg", "workimag/bmxg/BMXGraffiti3.jpg", "workimag/bmxg/BMXGraffiti4.jpg", "workimag/bmxg/BMXGraffiti5.jpg", "workimag/bmxg/BMXGraffiti6.jpg", "workimag/bmxg/BMXGraffiti7.jpg", "workimag/bmxg/BMXGraffiti8.jpg"],
+  details: "2023年1月22日から2月1日に開催した塩澄 祥大さんの個展「BMX Graffiti」のチラシなどのグラフィックデザイン。<br>自転車でストリートに水でグラフィティした作品の記録写真の展示。それらは基本的に夜にグラフィティされ自転車のライトで照らした状態で撮影されている。そのため写真は粗い。写真の荒さを生かして写真のドットを十字に変形させて独自の荒さを作っている。また、光沢紙にを用いてその十字のドットにマットニスを印刷してドットを強調している。<br>チラシ情報紙｜エスプリFP 四六判T目110kg、インク|表：K＋青（DIC-579D）＋マットニス,裏：K、渡辺印刷（株）<br>令和5年度文化庁メディア芸術クリエイター育成支援事業採択",
+  images: ["workimag/bmxg/BMXGraffiti2.jpg", "workimag/bmxg/BMXGraffiti3.jpg", "workimag/bmxg/BMXGraffiti4.jpg", "workimag/bmxg/BMXGraffiti5.jpg", "workimag/bmxg/BMXGraffiti6.jpg", "workimag/bmxg/BMXGraffiti7.jpg", "workimag/bmxg/BMXGraffiti1.jpg", "workimag/bmxg/BMXGraffiti8.jpg","workimag/bmxg/BMXGraffiti.gif"  ],
   date: "2023",
   category: "graphic design",
   link: "http://blockhouse.jp/index.php?itemid=315"
 }
 ,   {
   title: "植物生体電位測定キット",
-  details: "西田騎夕さんの「植物生体電位測定をオープンにするプロジェクト」で作成した測定キットのパッケージデザイン。タイトルとグラフィックのスタンプを数パターンづつ作成し、組み合わせることでバリエーションの展開をしている。グラフィックは葉や電図の波などをモチーフにしている。",
-  images: ["workimag/plantkit/plantkit.GIF",  "workimag/plantkit/plantkitp2.jpeg", "workimag/plantkit/plantkitp3.jpeg", "workimag/plantkit/plantkitp4.jpeg", "workimag/plantkit/plantkitp5.jpeg","workimag/plantkit/plantkitp1.jpeg", "workimag/plantkit/plantkitp6.png"],
+  details: "西田 騎夕さんの「植物生体電位測定をオープンにするプロジェクト」で作成したマイコン（Arduino Uno）にマウントして使用する植物生体電位の測定キットのパッケージデザイン。<br>タイトルとグラフィックのスタンプを数パターン作成し、組み合わせることでバリエーションの展開をしている。グラフィックは葉や電図の波などをモチーフに作成した。スタンプはレーザー加工機と3Dプリンタなどを用いて自作した。メーカーフェアやオンライン上で販売。",
+  images: ["workimag/plantkit/plantkit.GIF", "workimag/plantkit/plantkitp6.png",  "workimag/plantkit/plantkitp2.jpeg", "workimag/plantkit/plantkitp3.jpeg", "workimag/plantkit/plantkitp4.jpeg", "workimag/plantkit/plantkitp5.jpeg","workimag/plantkit/plantkitp1.jpeg"],
   date: "2023",
   category: "package design",
   link: "https://booth.pm/ja/items/5136397"
 }
 ,   {
   title: "はじめての植物生体電位測定",
-  details: "西田騎夕さんの「植物生体電位測定をオープンにするプロジェクト」で作成した技術書。装丁から表紙のイラスト、写真撮影などトータルでデザインを行った。",
+  details: "西田 騎夕さんの「植物生体電位測定をオープンにするプロジェクト」で作成した植物生体電位測定についての技術書。<br>装丁から表紙のイラスト、写真撮影などトータルでデザインを行った。表紙のイラストは、タイトルの「はじめての」というように導入書として手に取りやすいようにポップで教科書のような雰囲気を意識した。A5サイズ・80ページ。メーカーフェアやオンライン上で販売。",
   images: ["workimag/plantbook/plantbook1.jpeg", "workimag/plantbook/plantbook2.jpeg","workimag/plantbook/plantbook3.jpeg","workimag/plantbook/plantbook4.jpeg","workimag/plantbook/plantbook5.jpeg","workimag/plantbook/plantbook6.jpeg"],
   date: "2023",
   category: "book/illustration",
@@ -59,15 +59,15 @@ const contents = {
 }
 ,   {
   title: "個人メモサイト　発光！",
-  details: "iPhoneのメモアプリに個人的に書き溜めているメモを載せるサイト。ツイッターが名称変更された時に、もっと閉じた場所で呟きとも違うメモを貯める個人的な場所を作れないかと思ったのが動機。既存のブログを更新することと違って、サイトそのものを維持するということを行なっている。右上の色のついた四角を押すとcssが切り替わってデザインが変わる。",
+  details: "iPhoneのメモアプリに個人的に書き溜めているメモを載せるサイト。<br>ツイッターが名称変更された時に、もっと閉じた場所で呟きとも違うメモを貯める個人的な場所を作れないかと思ったのが動機。既存のブログを更新することと違って、サイトそのものを維持するということを行なっている。右上の色のついた四角を押すとcssが切り替わってデザインが変わる。",
   images: ["workimag/hakko/hakko1.png", "workimag/hakko/hakko2.png", "workimag/hakko/hakko3.png"],
   date: "2023",
   category: "website",
   link: "https://otasora.website/hakko/"
 }
 ,   {
-  title: "iamas2023",
-  details: "iamasという大学院の修了制作展のグラフィックデザインなどのトータルのデザインを行った。3Dソフト上で2Dのオブジェクトを配置して、空間内をカメラで撮影することでグラフィックに展開している。カメラワークによってバリエーションを作っている。",
+  title: "IAMAS2023",
+  details: "情報科学芸術大学院大学（IAMAS）という大学院の修了制作展のグラフィックデザインなどのトータルのデザイン。<br>3Dソフト上で2Dのオブジェクトを配置して、空間内をカメラで撮影することでグラフィックに展開している。カメラワークによってバリエーションを作っている。<br>制作物：DM、ハンドアウト、横断幕、垂れ幕、旗、デジタルサイネージ、webサイト",
   images: ["workimag/iamas2023/iamas2023_2.PNG", "workimag/iamas2023/iamas2023_1.PNG", "workimag/iamas2023/iamas2023_3.PNG", "workimag/iamas2023/iamas2023_4.PNG", "workimag/iamas2023/iamas2023_5.PNG", "workimag/iamas2023/iamas2023_6.PNG", "workimag/iamas2023/iamas2023_7.PNG", "workimag/iamas2023/iamas2023web1.png", "workimag/iamas2023/iamas2023web2.png", "workimag/iamas2023/iamas2023web3.png"],
   date: "2023",
   category: "design/website",
@@ -75,7 +75,7 @@ const contents = {
 }
 ,   {
   title: "クラブトレイン2022",
-  details: "岐阜の樽見鉄道で開催されたクラブイベントのベインビジュアルで使用したイラストレーション。鉄道の車両を貸し切って行うイベントで、地獄行きというコンセプトに合わせて妖怪や骸骨といったモチーフを用いた。",
+  details: "岐阜の樽見鉄道で開催されたクラブイベントのメインビジュアルで使用したイラストレーション。<br>鉄道の車両を貸し切って行うイベントで、地獄行き列車というコンセプトに合わせて水木しげるの絵からインスピレーションを得て妖怪や骸骨といったモチーフを描いた。",
   images: ["workimag/clubtrain2022/ct1.png", "workimag/clubtrain2022/ct2.JPG", "workimag/clubtrain2022/ct3.jpg"],
   date: "2022",
   category: "illustration",
@@ -83,7 +83,7 @@ const contents = {
 }
 ,   {
   title: "基礎デザイン学科卒業制作アーカイブ2021",
-  details: "武蔵野美術大学 基礎デザイン学科の2021年度の卒業制作を個人的にまとめたwebsite。同級生や講師の先生に依頼して作品とテキストの掲載を行った。自身の卒業した年度の友人たちの作品や雰囲気をアーカイブしたいという動機から作成した。ほとんど初めて作ったwebsite。",
+  details: "武蔵野美術大学 基礎デザイン学科の2021年度の卒業制作を個人的にまとめたwebsite。<br>同級生や講師の先生に依頼して作品とテキストの掲載を行った。自身の卒業した年度の友人たちの作品や雰囲気をアーカイブしたいという動機から作成した。ほとんど初めて作ったwebsite。",
   images: ["workimag/kisode2021doujin/kisoded2021_1.png", "workimag/kisode2021doujin/kisoded2021_2.png", "workimag/kisode2021doujin/kisoded2021_3.png", "workimag/kisode2021doujin/kisoded2021_4.png", "workimag/kisode2021doujin/kisoded2021_5.png"],
   date: "2022",
   category: "website/edit",
@@ -91,7 +91,7 @@ const contents = {
 }
 ,   {
   title: "大きな服小さな家展",
-  details: "学部三年生の「展示のデザイン」という授業で作成したグラフィック。大きな服と小さな家をテーマにファッションデザイナーに家を、建築家に服を作ってもらう展示を想定して企画から展示を計画した。",
+  details: "学部三年生の「展示のデザイン」という授業で作成したグラフィック。<br>大きな服と小さな家をテーマにファッションデザイナーに家を、建築家に服を作ってもらう展示を想定して企画から展示を計画した。",
   images: ["workimag/graphic/exhibitiondesign1.jpg", "workimag/graphic/exhibitiondesign2.jpg", "workimag/graphic/exhibitiondesign3.jpg", "workimag/graphic/exhibitiondesign4.jpg", "workimag/graphic/exhibitiondesign5.jpg", "workimag/graphic/exhibitiondesign6.jpg"],
   date: "2020",
   category: "graphic design",
@@ -99,7 +99,7 @@ const contents = {
 }
 ,   {
   title: "食べるグラフィック展",
-  details: "2019年の武蔵野美術大学オープンキャンパス内で行った展示。架空のデザイナーを100人設定して、食べ物をテーマにポスターを制作した。三人で行い一人33枚のポスターを制作した。",
+  details: "2019年の武蔵野美術大学オープンキャンパス内で行った展示。<br>架空のデザイナーを100人設定して、食べ物をテーマにポスターを制作した。三人で行い一人33枚のポスターを制作した。友人三名と本展示の企画、運営、デザインを行った。",
   images: ["workimag/eatgraphic/eatgraphic1.jpg", "workimag/eatgraphic/eatgraphic2.jpg", "workimag/eatgraphic/eatgraphic3.jpg", "workimag/eatgraphic/eatgraphic4.jpg", "workimag/eatgraphic/eatgraphic5.jpg"],
   date: "2019",
   category: "exhibition design",
@@ -115,7 +115,7 @@ const contents = {
 }
 ,   {
   title: "judge展",
-  details: "2018年の武蔵野美術大学オープンキャンパス内で行った展示。学生による広告ポスターコンペティション。設定した課題に対して広告を制作し、芸祭に遊びに来るお客さんに投票してもらう観客参加型の展示。ニベアクリーム、ステッドラー、チロルチョコなどをテーマに雑誌広告や電車のつり広告といった複数の媒体での広告のデザインを参加者に作成してもらった。本展示の運営を行った。",
+  details: "2018年の武蔵野美術大学オープンキャンパス内で行った展示。<br>学生による広告ポスターコンペティション。設定した課題に対して広告を制作し、芸祭に遊びに来るお客さんに投票してもらう観客参加型の展示。ニベアクリーム、ステッドラー、チロルチョコなどをテーマに雑誌広告や電車のつり広告といった複数の媒体での広告のデザインを参加者に作成してもらった。友人三名と本展示の企画、運営、デザインを行った。",
   images: ["workimag/jadge/judge1.jpg", "workimag/jadge/judge2.jpg", "workimag/jadge/judge3.jpg", "workimag/jadge/judge4.jpg", "workimag/jadge/judge5.jpg", "workimag/jadge/judge6.jpg", "workimag/jadge/judge7.jpg", "workimag/jadge/judge8.jpg", "workimag/jadge/judge9.jpg", "workimag/jadge/judge10.jpg"],
   date: "2018",
   category: "exhibition design",
@@ -127,7 +127,7 @@ const contents = {
     {
       title: "about",
       details: "オオタソラ<br>1998年福岡生まれ。武蔵野美術大学 造形学部 基礎デザイン学科 卒業。web、グラフィックデザイン、映像の制作を主に行う。モニターに映し出される表現に興味がある。<br><br>【展覧会歴】<br>2024年 <br>・多摩美術大学助手展2024<br>・2人展「Shinin d(^_^o)」<br>2023年 <br>・多摩美術大学助手展2023",
-      images: ["icon.webp"]
+      images: ["imag/icon.webp"]
     }
   ],
   link_list: [
@@ -136,9 +136,9 @@ const contents = {
     details: "",
     images: [""],
     links: [
-      { title: "Instagram", url: "https://www.instagram.com/abbbbbbbbboe/" },
-      { title: "メモ", url: "https://otasora.website/hakko/" },
-      { title: "日記", url: "https://note.com/otasora" }
+      { title: "Instagram↗︎", url: "https://www.instagram.com/abbbbbbbbboe/" },
+      { title: "メモ↗︎", url: "https://otasora.website/hakko/" },
+      { title: "日記↗︎", url: "https://note.com/otasora" }
     ]
   }
   ],
@@ -206,14 +206,24 @@ function showCategory(category) {
 
     contentList.innerHTML = html;
 
-    // 🔸 画像があれば右側（detailsDiv）に表示
-    let imagesHTML = '';
-    if (item.images && item.images.length > 0) {
-      imagesHTML = item.images.map(src => `<img src="${src}" class="about-image">`).join('');
-      detailsDiv.innerHTML = imagesHTML;
-    } else {
-      detailsDiv.innerHTML = ''; // 画像がなければ空に
-    }
+    // 🔸 画像があれば PC では右側、モバイルでは中央に表示
+let imagesHTML = '';
+if (item.images && item.images.length > 0) {
+  imagesHTML = item.images.map(src => `<img src="${src}" class="about-image">`).join('');
+
+  if (window.innerWidth <= 768) {
+    // 🔸 モバイル：画像をテキストの上に表示
+    contentList.innerHTML = imagesHTML + contentList.innerHTML;
+    detailsDiv.innerHTML = ''; // 右側は空に
+  } else {
+    // 🔸 PC：右側に画像を表示
+    detailsDiv.innerHTML = imagesHTML;
+  }
+} else {
+  detailsDiv.innerHTML = ''; // 画像がなければ空に
+}
+
+
 
   } else {
     // 🔹 work 等のカテゴリ表示処理
@@ -337,7 +347,7 @@ function showDetails(category, index) {
     <p class="detail-meta">
       ${detail.date ? `<span class="detail-date"> ${detail.date}</span><br>` : ''}
       ${detail.category ? `<span class="detail-category"> ${detail.category}</span><br>` : ''}
-      ${detail.link ? `<span class="detail-link"><a href="${detail.link}" target="_blank">${detail.link}↗︎</a></span><br>` : ''}
+      ${detail.link ? `<span class="detail-link"><a href="${detail.link}" style="padding-top:10px;" target="_blank">↗︎${detail.link}↗︎</a></span><br>` : ''}
     </p>
     <p class="detail-description">${detail.details}</p>
     <div class="detail-images">${imagesHTML}</div>
@@ -391,7 +401,10 @@ const bgImages = [
   "bg11.png", "bg12.png", "bg13.png", "bg14.png", "bg15.png",
   "bg16.png", "bg17.png", "bg18.png", "bg19.png", "bg20.png",
   "bg21.png", "bg22.png", "bg23.png", "bg24.png", "bg25.png",
-  "bg26.png", "bg27.png"
+  "bg26.png", "bg27.png", "bg28.png", "bg29.png", "bg30.png",
+  "bg31.png", "bg32.png", "bg33.png", "bg34.png", "bg35.png",
+  "bg36.png", "bg37.png", "bg38.png", "bg39.png", "bg40.png",
+  "bg41.png", "bg42.png"
 ];
 
 // 🔸 画像プリロード
