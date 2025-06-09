@@ -98,9 +98,7 @@ margin-left: 3px;
   margin-bottom: 18px;
 }
 
-.about-image{
-  width: 500px;
-}
+
 
 
 
@@ -411,8 +409,8 @@ border: none;
 
 
 .about-image {
-  max-width: 80%;
-  margin-top: 10px;
+  width: 300px;
+  margin-top: 45px;
   
 }
 
@@ -456,11 +454,13 @@ border: none;
 #hamburger::before {
   content: "☰";
   font-size: 30px;
+  color: #474747;
 }
 
 /* 開いているときは × */
 #hamburger.open::before {
   content: "×";
+  color: #474747;
 }
 
 
@@ -524,6 +524,11 @@ border: none;
 
 /* ===== スマホ表示：ステップ切り替え ===== */
 @media screen and (max-width: 768px) {
+  .body{
+    height: 100vh; /* または必要な高さ */
+  overflow: auto;
+  -webkit-overflow-scrolling: touch; /* iOSで慣性スクロールを有効にする */
+  }
   .container {
     flex-direction: column;
   }
@@ -658,4 +663,7 @@ border: none;
   
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
+
+
+
 }

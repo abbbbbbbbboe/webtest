@@ -19,7 +19,7 @@ const contents = {
 }
 ,   {
   title: "スポーツデンキデパート 1stEP「電波ステーション」",
-  details: "ボカロPスポーツデンキデパートの1stEP「電波ステーション」のジャケットで使用したイラストレーション。電波っぽく中性的なキャラクターのイラストを作成した。<br>Producer/Composer：スポーツデンキデパート、Illustrator：月面宇宙軍＋オオタソラ、GraphicDesigner：kwsm、Special Thanks：RY /じょん",
+  details: "ボカロPスポーツデンキデパートの1stEP「電波ステーション」のジャケットで使用したイラストレーション。電波っぽく中性的なキャラクターのイラストを作成した。<br>Producer/Composer：スポーツデンキデパート<br>Illustrator：月面宇宙軍＋オオタソラ<br>GraphicDesigner：kwsm<br>Special Thanks：RY /じょん",
   images: ["workimag/dempastation/dempastation1.jpg", "workimag/dempastation/dempastation2.jpg", "workimag/dempastation/dempastation3.jpg", "workimag/dempastation/dempastation4.jpg"],
   date: "2023",
   category: "illustration",
